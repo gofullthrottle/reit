@@ -1,87 +1,91 @@
 reits,sector
-VNQ,Index
-ACC,Apts
-AEC,Apts
-AHP,Apts
-AHT,Apts
-AIV,Apts
-AKR,Apts
-AMH,Apts
-ARE,Hotels
-AVB,Hotels
-BDN,Hotels
-BFS,Hotels
-BMR,Hotels
-BXP,Hotels
-CBL,Hotels
-CDR,Hotels
-CLI,Hotels
-CPT,Other
-CUBE,Other
-CUZ,Other
-CWH,Other
-CXP,Other
-DCT,Other
-DDR,Other
-DEI,Other
-DFT,Other
-DLR,Other
-DRE,Other
-DRH,Other
-EDR,Other
-EGP,Other
-ELS,Other
-EQR,Other
-EQY,Other
-ESS,Other
-EXR,Other
-FCH,Other
-FPO,Other
-FR,Other
-FRT,Other
-FSP,Other
-GGP,Other
-GRT,Other
-HCN,Other
-HCP,Other
-HIW,Other
-HME,Other
-HPT,Other
-HR,Other
-HST,Other
-HT,Other
-IRC,Other
-KIM,Other
-KRC,Other
-KRG,Other
-LHO,Other
-LPT,Other
-LTC,Other
-MAA,Other
-MAC,Other
-OFC,Other
-PDM,Other
-PEB,Other
-PEI,Other
-PKY,Other
-PLD,Other
-PPS,Other
-PSA,Other
-PSB,Other
-REG,Other
-RPT,Other
-RSE,Other
-SHO,Other
-SKT,Other
-SLG,Other
-SNH,Other
-SPG,Other
-SSS,Other
-SUI,Other
-TCO,Other
-UDR,Other
-UHT,Other
-VNO,Other
-VTR,Other
-WRE,Other
-WRI,Other
+RWR,Index
+ACC ,Residential
+AEC ,Residential
+AHP ,Hotel
+AHT ,Hotel
+AIV ,Residential
+AKR ,Retail
+AMH ,Residential
+ARE ,Office
+AVB ,Residential
+BDN ,Office
+BEE ,Hotel
+BFS ,Retail
+BMR ,Office
+BRX ,Retail
+BXP ,Office
+CBL ,Retail
+CDR ,Retail
+CLI ,Office
+CPT ,Residential
+CUBE ,Specialized
+CUZ ,Diversified
+CXP ,Office
+DCT ,Industrial
+DDR ,Retail
+DEI ,Office
+DFT ,Office
+DLR ,Office
+DRE ,Diversified
+DRH ,Hotel
+EDR ,Residential
+EGP ,Industrial
+ELS ,Residential
+EQC ,Office
+EQR ,Residential
+EQY ,Retail
+ESS ,Residential
+EXR ,Specialized
+FCH ,Hotel
+FPO ,Diversified
+FR ,Industrial
+FRT ,Retail
+FSP ,Office
+GGP ,Retail
+GRT ,Retail
+HCN ,Healthcare
+HCP ,Healthcare
+HIW ,Office
+HME ,Residential
+HPT ,Hotel
+HR ,Healthcare
+HST ,Hotel
+HT ,Hotel
+IRC ,Retail
+KIM ,Retail
+KRC ,Office
+KRG ,Retail
+LHO ,Hotel
+LPT ,Diversified
+LTC ,Healthcare
+MAA ,Residential
+MAC ,Retail
+OFC ,Office
+PDM ,Office
+PEB ,Hotel
+PEI ,Retail
+PKY ,Office
+PLD ,Industrial
+PPS ,Residential
+PSA ,Specialized
+PSB ,Diversified
+REG ,Retail
+RPT ,Retail
+RSE ,Retail
+SBY ,Residential
+SHO ,Hotel
+SKT ,Retail
+SLG ,Office
+SNH ,Healthcare
+SPG ,Retail
+SSS ,Specialized
+SUI ,Residential
+TCO ,Retail
+UDR ,Residential
+UHT ,Healthcare
+VNO ,Diversified
+VTR ,Healthcare
+WPG ,Retail
+WRE ,Diversified
+WRI ,Retail

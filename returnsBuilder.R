@@ -3,10 +3,10 @@ library(quantmod)
 
 #"constants" to be maniupulated and applied within the code
 # change date here
-setwd("C:/Users/Kevin/Documents/Projects/R/Shiny/REIT/CorrelationApp")
+setwd("C:/Users/Kevin/Documents/Projects/R/Shiny/REIT/CorrelationApp_v0")
 fileName = "monthlyReturns.csv"
 endDate <- Sys.Date()
-startDate <- "2000-01-01"
+startDate <- "1999-01-01"
 
 tickers <- read.csv("data/tickers.csv", stringsAsFactors = FALSE)
 reits <- tickers$reits

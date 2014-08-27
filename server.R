@@ -21,16 +21,36 @@ shinyServer(function(input, output){
       return()
     
     switch(input$sector,
-           "Apts" = checkboxGroupInput("selectedREITs", 
+           "Diversified" = checkboxGroupInput("selectedREITs", 
                                        label = "Choose the REITs you want to display",
                                        choices = listREITs,
                                        selected = listREITs[1:length(listREITs)]),
-           "Hotels" = checkboxGroupInput("selectedREITs", 
+           "Healthcare" = checkboxGroupInput("selectedREITs", 
                                        label = "Choose the REITs you want to display",
                                        choices = listREITs,
                                        selected = listREITs[1:length(listREITs)]),
-           "Other" = checkboxGroupInput("selectedREITs", 
-                                       label = "Choose the REITS you want to display",
+           "Hotel" = checkboxGroupInput("selectedREITs", 
+                                         label = "Choose the REITs you want to display",
+                                         choices = listREITs,
+                                         selected = listREITs[1:length(listREITs)]),
+           "Industrial" = checkboxGroupInput("selectedREITs", 
+                                         label = "Choose the REITs you want to display",
+                                         choices = listREITs,
+                                         selected = listREITs[1:length(listREITs)]),
+           "Office" = checkboxGroupInput("selectedREITs", 
+                                         label = "Choose the REITs you want to display",
+                                         choices = listREITs,
+                                         selected = listREITs[1:length(listREITs)]),
+           "Residential" = checkboxGroupInput("selectedREITs", 
+                                         label = "Choose the REITs you want to display",
+                                         choices = listREITs,
+                                         selected = listREITs[1:length(listREITs)]),
+           "Retail" = checkboxGroupInput("selectedREITs", 
+                                         label = "Choose the REITs you want to display",
+                                         choices = listREITs,
+                                         selected = listREITs[1:length(listREITs)]),
+           "Specialized" = checkboxGroupInput("selectedREITs", 
+                                       label = "Choose the REITs you want to display",
                                        choices = listREITs,
                                        selected = listREITs[1:length(listREITs)])
     )
@@ -71,7 +91,7 @@ shinyServer(function(input, output){
     selectedSeries2 <- cumprod(selectedSeries1+1)
     
     selectedREITs <- input$selectedREITs
-    selectedREITs <- append("VNQ", selectedREITs)
+    selectedREITs <- append("RWR", selectedREITs)
     tsRainbow <- rainbow(length(selectedREITs))
     
     plot(selectedSeries2, xlab = "Time", ylab = "Cumulative Return", screens = 1, col = tsRainbow)
@@ -79,7 +99,13 @@ shinyServer(function(input, output){
       
   })
   
-  output$correlationTable <- renderTable({
+  output$TEST <- renderText({
+  
+    "This is a compact web-app to screen REIT correlations. Prices are up-to-date as of 8/26/2014. Returns are calculated monthly."
+  })  
+
+
+  m <- reactive({
     
     selectedSeries1 <- seriesInput()
     selectedSeries2 <- selectedSeries1[,-1]
@@ -87,20 +113,20 @@ shinyServer(function(input, output){
     m <- cor(selectedSeries2, y = NULL, use = "pairwise.complete.obs")
     
     return(m)
+    
+  })
 
+  output$correlationTable <- renderTable({
+    
+    correlationTable <- m()
     
   })
   
-  output$TEST <- renderText({
-    
-    "This is a compact web-app to screen REIT correlations. Prices are up-to-date as of 8/26/2014"
-  })
+  
   
   output$Table1 <- renderDataTable({
-    selectedSeries1 <- seriesInput()
-    selectedSeries2 <- selectedSeries1[,-1]
     
-    m0 <- cor(selectedSeries2, y = NULL, use = "pairwise.complete.obs")
+    m0 <- m()
     
     m0[lower.tri(m0, diag=TRUE)] <- NA
     m1 <- melt(m0,varnames = c("V1", "V2"), na.rm = TRUE, value.name = "Cor")
